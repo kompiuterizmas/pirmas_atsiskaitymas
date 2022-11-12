@@ -1,0 +1,22 @@
+@media (min-width: 756px) {
+  .header {
+    .container {
+      .toggler {
+        display: none;
+      }
+      .hamburger {
+        display: none;
+      }
+      .menu {
+        position: static;
+        transform: rotateX(0deg);
+        ul {
+          position: static;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

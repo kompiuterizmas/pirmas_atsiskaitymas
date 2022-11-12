@@ -1,0 +1,227 @@
+.invisible {
+  opacity: 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--area-a {
+  grid-area: a;
+}
+
+.grid--area-b {
+  grid-area: b;
+}
+
+.grid--area-c {
+  grid-area: c;
+}
+
+.grid--area-d {
+  grid-area: d;
+}
+
+.grid--area-e {
+  grid-area: e;
+}
+
+.grid--area-f {
+  grid-area: f;
+}
+
+.pt-200 {
+  padding-top: 200px;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+:root * {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 167, 75, 0.3137254902);
+  color: #00441f;
+}
+
+.header {
+  color: #cbc500;
+  padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+  background-color: #00302d;
+}
+.header .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 1;
+}
+.header .container img {
+  height: 100%;
+  object-fit: contain;
+}
+.header .container .toggler {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+}
+.header .container .toggler:checked + .hamburger {
+  transform: rotate(135deg);
+}
+.header .container .toggler:checked + .hamburger::before, .header .container .toggler:checked + .hamburger::after {
+  transform: rotate(90deg);
+}
+.header .container .toggler:checked ~ .menu {
+  transform: rotateY(0deg);
+}
+.header .container .hamburger {
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #cbc500;
+  position: absolute;
+  right: 0px;
+  transition: all 0.4s ease;
+}
+.header .container .hamburger::before {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #cbc500;
+  position: absolute;
+  transform: translateY(-1rem);
+}
+.header .container .hamburger::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #cbc500;
+  position: absolute;
+  transform: translateY(1rem);
+}
+.header .container .menu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: rotateX(90deg);
+  transition: all 0.4s ease;
+}
+.header .container .menu ul {
+  background-color: #00302d;
+  position: absolute;
+  bottom: -11rem;
+  right: -1rem;
+  border-radius: 0 0px 1rem 1rem;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  padding-inline-start: 0;
+}
+.header .container .menu ul li {
+  text-align: right;
+}
+.header .container .menu ul li a {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #cbc500;
+}
+.header .container .menu ul li a:hover {
+  color: #cb1b00;
+}
+
+.main {
+  position: relative;
+  padding: 7rem 1rem 3rem;
+}
+.main .section .article {
+  padding: 1rem;
+  grid-template-areas: "aaa" "ccb" "cbb";
+  gap: 0.5rem;
+  border-radius: 1rem;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0 0 5px 2px #00302d;
+  border: 1px solid #00302d;
+}
+.main .section .article * {
+  border: 1px solid green;
+}
+.main .section .article .title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  color: #cbc500;
+}
+.footer .footer-left {
+  padding: 1rem;
+  background-color: #00302d;
+  width: 30vw;
+  min-width: fit-content;
+  text-align: left;
+  border-radius: 0 2rem 0 0;
+}
+.footer .footer-right {
+  background-color: #00302d;
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 2rem 0 0 0;
+  color: #cbc500;
+}
+.footer .footer-right a {
+  font-size: 2rem;
+  color: #cbc500;
+}
+
+@media (min-width: 600px) {
+  header nav {
+    display: flex;
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 756px) {
+  .header .container .toggler {
+    display: none;
+  }
+  .header .container .hamburger {
+    display: none;
+  }
+  .header .container .menu {
+    position: static;
+    transform: rotateX(0deg);
+  }
+  .header .container .menu ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

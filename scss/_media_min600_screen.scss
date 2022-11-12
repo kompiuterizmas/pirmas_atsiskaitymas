@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+  header {
+    nav {
+      display: flex;
+      ul {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
